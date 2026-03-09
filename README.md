@@ -50,3 +50,9 @@ robot -d results testcase/
 After the tests complete, you can find the detailed reports in the `results/` directory:
 - `report.html`: High-level summary of test execution.
 - `log.html`: Detailed log of every step taken during the test.
+
+---
+
+## 👨‍💻 Credits
+
+Created by **TIM1Zk**
