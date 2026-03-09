@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2026-03-09T22:12:32.926958" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Project" source="d:\test_project">
+<suite id="s1-s1" name="Testcase" source="d:\test_project\testcase">
+<suite id="s1-s1-s1" name="Signin" source="d:\test_project\testcase\signin.robot">
+<test id="s1-s1-s1-t1" name="Sign In Page" line="5">
+<kw name="Go To Url" owner="Keyword">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-03-09T22:12:33.557691" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "d:\\test_project\\results\\browser\\traces\\temp\\f1869091-4180-41da-8cad-1577cb479295"}</msg>
+<msg time="2026-03-09T22:12:33.607884" level="INFO">Starting Browser process c:\Users\TUF GAMING\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:55970</msg>
+<msg time="2026-03-09T22:12:35.548783" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"d:\\test_project\\results\\browser\\traces\\temp\\f1869091-4180-41da-8cad-1577cb479295"}</msg>
+<arg>${browser}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-03-09T22:12:33.556135" elapsed="1.993657"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-03-09T22:12:43.664239" level="INFO">Successfully initialized new page object and opened url: https://demo.realworld.show/</msg>
+<msg time="2026-03-09T22:12:43.664239" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${url}</arg>
+<arg>networkidle</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-03-09T22:12:35.551918" elapsed="8.113889"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>10s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2026-03-09T22:12:43.665807" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T22:12:48.667948" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T22:12:43.665807" elapsed="5.002646"/>
+</kw>
+<status status="PASS" start="2026-03-09T22:12:33.554581" elapsed="15.113872"/>
+</kw>
+<kw name="Sign Up" owner="Keyword">
+<kw name="Click" owner="Browser">
+<msg time="2026-03-09T22:12:48.670010" level="INFO">Clicks the element 'a:has-text("Sign Up")'.</msg>
+<arg>selector=a:has-text("Sign Up")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-03-09T22:12:48.670010" elapsed="0.121001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T22:12:53.793007" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T22:12:48.792581" elapsed="5.000426"/>
+</kw>
+<status status="PASS" start="2026-03-09T22:12:48.668453" elapsed="5.124554"/>
+</kw>
+<msg time="2026-03-09T22:12:53.825061" level="INFO">Switching context to context=946a1d56-3097-4bde-ba9e-1c3914b8cc0c in CURRENT</msg>
+<msg time="2026-03-09T22:12:53.842347" level="INFO">Successfully changed active context: context=946a1d56-3097-4bde-ba9e-1c3914b8cc0c</msg>
+<msg time="2026-03-09T22:12:53.918516" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-03-09T22:12:33.548330" elapsed="20.246217"/>
+</test>
+<status status="PASS" start="2026-03-09T22:12:33.112557" elapsed="20.810946"/>
+</suite>
+<status status="PASS" start="2026-03-09T22:12:33.099880" elapsed="20.872157"/>
+</suite>
+<status status="PASS" start="2026-03-09T22:12:32.941204" elapsed="21.052772"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Project" id="s1" pass="1" fail="0" skip="0">Test Project</stat>
+<stat name="Testcase" id="s1-s1" pass="1" fail="0" skip="0">Test Project.Testcase</stat>
+<stat name="Signin" id="s1-s1-s1" pass="1" fail="0" skip="0">Test Project.Testcase.Signin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

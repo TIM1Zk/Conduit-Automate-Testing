@@ -1,0 +1,33 @@
+{"level":30,"time":"2026-03-09T15:12:34.766Z","pid":880,"hostname":"ITIM","msg":"Listening on 127.0.0.1:55970"}
+{"level":30,"time":"2026-03-09T15:12:35.167Z","pid":880,"hostname":"ITIM","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-03-09T15:12:35.539Z","pid":880,"hostname":"ITIM","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2026-03-09T15:12:35.541Z","pid":880,"hostname":"ITIM","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-03-09T15:12:35.542Z","pid":880,"hostname":"ITIM","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-03-09T15:12:35.564Z","pid":880,"hostname":"ITIM","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-03-09T15:12:35.566Z","pid":880,"hostname":"ITIM","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@ede7b11d4921780ad4ee32506faedba1\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=5c7fa08d-b9f2-4f42-9c54-b8e9939e10cb\"}"}
+{"level":30,"time":"2026-03-09T15:12:35.613Z","pid":880,"hostname":"ITIM","msg":"Setting default timeout for context context=946a1d56-3097-4bde-ba9e-1c3914b8cc0c to 10000"}
+{"level":30,"time":"2026-03-09T15:12:35.614Z","pid":880,"hostname":"ITIM","msg":"Changed active context: context=946a1d56-3097-4bde-ba9e-1c3914b8cc0c"}
+{"level":30,"time":"2026-03-09T15:12:35.954Z","pid":880,"hostname":"ITIM","msg":"Video path: undefined"}
+{"level":30,"time":"2026-03-09T15:12:35.954Z","pid":880,"hostname":"ITIM","msg":"Changed active page"}
+{"level":30,"time":"2026-03-09T15:12:43.662Z","pid":880,"hostname":"ITIM","msg":"End of node method newPage"}
+{"level":30,"time":"2026-03-09T15:12:48.673Z","pid":880,"hostname":"ITIM","msg":"Start of node method click"}
+{"level":30,"time":"2026-03-09T15:12:48.673Z","pid":880,"hostname":"ITIM","msg":"Strict mode is enabled, find Locator with a:has-text(\"Sign Up\") in page."}
+{"level":30,"time":"2026-03-09T15:12:48.788Z","pid":880,"hostname":"ITIM","msg":"End of node method click"}
+{"level":30,"time":"2026-03-09T15:12:53.803Z","pid":880,"hostname":"ITIM","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-09T15:12:53.807Z","pid":880,"hostname":"ITIM","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-09T15:12:53.811Z","pid":880,"hostname":"ITIM","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-09T15:12:53.816Z","pid":880,"hostname":"ITIM","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-09T15:12:53.819Z","pid":880,"hostname":"ITIM","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-09T15:12:53.823Z","pid":880,"hostname":"ITIM","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-09T15:12:53.828Z","pid":880,"hostname":"ITIM","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-09T15:12:53.831Z","pid":880,"hostname":"ITIM","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-09T15:12:53.836Z","pid":880,"hostname":"ITIM","msg":"Changed active context: context=946a1d56-3097-4bde-ba9e-1c3914b8cc0c"}
+{"level":30,"time":"2026-03-09T15:12:53.836Z","pid":880,"hostname":"ITIM","msg":"Changing current active page: page=1487ab42-e26b-48ea-94dd-4815709685b3"}
+{"level":30,"time":"2026-03-09T15:12:53.836Z","pid":880,"hostname":"ITIM","msg":"Changed active page"}
+{"level":30,"time":"2026-03-09T15:12:53.843Z","pid":880,"hostname":"ITIM","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-03-09T15:12:53.880Z","pid":880,"hostname":"ITIM","msg":"Removed page=1d80aafc-fe8d-4cac-8a21-6181eaf6895b from context=946a1d56-3097-4bde-ba9e-1c3914b8cc0c page stack"}
+{"level":30,"time":"2026-03-09T15:12:53.914Z","pid":880,"hostname":"ITIM","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-03-09T15:12:53.968Z","pid":880,"hostname":"ITIM","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-09T15:12:53.968Z","pid":880,"hostname":"ITIM","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-09T15:12:54.284Z","pid":880,"hostname":"ITIM","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-03-09T15:12:54.676Z","pid":880,"hostname":"ITIM","msg":"End of node method closeAllBrowsers"}
