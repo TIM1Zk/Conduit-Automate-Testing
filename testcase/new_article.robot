@@ -1,25 +1,25 @@
 *** Settings ***
 Library     Browser
+Library     DataDriver    file=../Testdata/testdata_article.xlsx    sheet_name=Sheet1    handle_empty_cells=True
 Resource    ../Resource/Keyword.robot
 Resource    ../Variable/variable.robot
 
 Suite Setup      Go To Url
 Suite Teardown   Close Browser
-
-*** Variables ***
-${TEST_EMAIL}          test1@example.com
-${TEST_PASSWORD}       password123
-${ARTICLE_TITLE}       Automated Article Title
-${ARTICLE_DESC}        This is an automated article description.
-${ARTICLE_BODY}        # Automated Content\n\nThis is the body of the article created by Robot Framework.
-${ARTICLE_TAGS}        robotframework, automation
+Test Template    Create New Article From Excel
+Test Teardown    Teardown Article Test
 
 *** Test Cases ***
-Create New Article Successfully
-    ${random_str}=    Evaluate    "".join(random.sample(string.ascii_lowercase, 8))    modules=random, string
-    ${username}=      Set Variable    user_${random_str}
-    ${email}=         Set Variable    ${username}@example.com
-    
-    Sign Up    ${username}    ${email}    ${TEST_PASSWORD}
-    Create Article    ${ARTICLE_TITLE}    ${ARTICLE_DESC}    ${ARTICLE_BODY}    ${ARTICLE_TAGS}
-    [Teardown]    Logout
+Create New Article Successfully With ${username}
+
+*** Keywords ***
+Create New Article From Excel
+    [Arguments]    ${username}    ${email}    ${password}    ${title}    ${description}    ${body}    ${tags}
+    Set Suite Variable    ${CURRENT_TEST_USER}    ${username}
+    Sign Up    ${username}    ${email}    ${password}
+    Create Article    ${title}    ${description}    ${body}    ${tags}
+
+Teardown Article Test
+    Run Keyword If Test Passed    Log Result To Excel    ${CURRENT_TEST_USER}    PASS    testdata_article.xlsx
+    Run Keyword If Test Failed    Log Result To Excel    ${CURRENT_TEST_USER}    FAIL    testdata_article.xlsx
+    Logout

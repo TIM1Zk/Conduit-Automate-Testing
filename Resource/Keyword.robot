@@ -87,8 +87,8 @@ Logout
     Go To    ${url}
 
 Log Result To Excel
-    [Arguments]    ${user}    ${status}
-    ${excel_path}=    Set Variable    ${CURDIR}/../Testdata/testdata_signup.xlsx
+    [Arguments]    ${user}    ${status}    ${excel_file}=testdata_signup.xlsx
+    ${excel_path}=    Set Variable    ${CURDIR}/../Testdata/${excel_file}
     Log    Logging result for ${user} with status ${status} to ${excel_path}
     
     Open Excel Document    ${excel_path}    signup

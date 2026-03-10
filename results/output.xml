@@ -1,336 +1,1077 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-10T23:23:58.292687" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-03-10T23:31:17.706345" rpa="false" schemaversion="5">
 <suite id="s1" name="New Article" source="D:\Conduit-Automate-Testing\testcase\new_article.robot">
 <kw name="Go To Url" owner="Keyword" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-03-10T23:23:58.910075" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\Conduit-Automate-Testing\\results\\browser\\traces\\temp\\3cdd58d3-d42e-45f2-8aba-e040f756d1ce"}</msg>
-<msg time="2026-03-10T23:23:58.951464" level="INFO">Starting Browser process C:\Users\com\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:63564</msg>
-<msg time="2026-03-10T23:24:00.198511" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\Conduit-Automate-Testing\\results\\browser\\traces\\temp\\3cdd58d3-d42e-45f2-8aba-e040f756d1ce"}</msg>
+<msg time="2026-03-10T23:31:18.359391" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\Conduit-Automate-Testing\\results\\browser\\traces\\temp\\a99bdb8f-c33a-4248-9eb4-5b10ed21b8c1"}</msg>
+<msg time="2026-03-10T23:31:18.378592" level="INFO">Starting Browser process C:\Users\com\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:63901</msg>
+<msg time="2026-03-10T23:31:19.078898" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\Conduit-Automate-Testing\\results\\browser\\traces\\temp\\a99bdb8f-c33a-4248-9eb4-5b10ed21b8c1"}</msg>
 <arg>${browser}</arg>
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-03-10T23:23:58.908228" elapsed="1.290821"/>
+<status status="PASS" start="2026-03-10T23:31:18.358709" elapsed="0.720703"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-03-10T23:24:05.313172" level="INFO">Successfully initialized new page object and opened url: https://demo.realworld.show/</msg>
-<msg time="2026-03-10T23:24:05.313258" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2026-03-10T23:31:23.760247" level="INFO">Successfully initialized new page object and opened url: https://demo.realworld.show/</msg>
+<msg time="2026-03-10T23:31:23.760327" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>${url}</arg>
 <arg>networkidle</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-03-10T23:24:00.199461" elapsed="5.114025"/>
+<status status="PASS" start="2026-03-10T23:31:19.080067" elapsed="4.680459"/>
 </kw>
 <kw name="Set Browser Timeout" owner="Browser">
 <arg>10s</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" start="2026-03-10T23:24:05.313709" elapsed="0.000706"/>
+<status status="PASS" start="2026-03-10T23:31:23.760779" elapsed="0.000657"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-10T23:24:10.315342" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-03-10T23:31:28.762312" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-10T23:24:05.314619" elapsed="5.000867"/>
+<status status="PASS" start="2026-03-10T23:31:23.761592" elapsed="5.000849"/>
 </kw>
-<status status="PASS" start="2026-03-10T23:23:58.906501" elapsed="11.409123"/>
+<status status="PASS" start="2026-03-10T23:31:18.357988" elapsed="10.404576"/>
 </kw>
-<test id="s1-t1" name="Create New Article Successfully" line="18">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-03-10T23:24:10.323607" level="INFO">${random_str} = scyzkvmd</msg>
-<var>${random_str}</var>
-<arg>"".join(random.sample(string.ascii_lowercase, 8))</arg>
-<arg>modules=random, string</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-03-10T23:24:10.322987" elapsed="0.000656"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-03-10T23:24:10.324131" level="INFO">${username} = user_scyzkvmd</msg>
-<var>${username}</var>
-<arg>user_${random_str}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-03-10T23:24:10.323782" elapsed="0.000377"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-03-10T23:24:10.324555" level="INFO">${email} = user_scyzkvmd@example.com</msg>
-<var>${email}</var>
-<arg>${username}@example.com</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-03-10T23:24:10.324271" elapsed="0.000308"/>
+<test id="s1-t1" name="Create New Article Successfully With user_a" line="13">
+<kw name="Create New Article From Excel">
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:28.771659" level="INFO">${CURRENT_TEST_USER} = user_a</msg>
+<arg>${CURRENT_TEST_USER}</arg>
+<arg>${username}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-03-10T23:31:28.770925" elapsed="0.000782"/>
 </kw>
 <kw name="Sign Up" owner="Keyword">
 <kw name="Click" owner="Browser">
-<msg time="2026-03-10T23:24:10.325482" level="INFO">Clicks the element 'a:has-text("Sign Up")'.</msg>
+<msg time="2026-03-10T23:31:28.772594" level="INFO">Clicks the element 'a:has-text("Sign Up")'.</msg>
 <arg>selector=a:has-text("Sign Up")</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:10.325148" elapsed="0.050697"/>
+<status status="PASS" start="2026-03-10T23:31:28.772252" elapsed="0.045230"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-03-10T23:24:10.377134" level="INFO">Fills the text 'user_scyzkvmd' in the given field.</msg>
+<msg time="2026-03-10T23:31:28.818220" level="INFO">Fills the text 'user_a' in the given field.</msg>
 <arg>selector=input[placeholder="Username"]</arg>
 <arg>txt=${username}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:10.376179" elapsed="0.847984"/>
+<status status="PASS" start="2026-03-10T23:31:28.817679" elapsed="0.824108"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-03-10T23:24:11.225048" level="INFO">Fills the text 'user_scyzkvmd@example.com' in the given field.</msg>
+<msg time="2026-03-10T23:31:29.642582" level="INFO">Fills the text 'user_a@example.com' in the given field.</msg>
 <arg>selector=input[placeholder="Email"]</arg>
 <arg>txt=${email}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:11.224439" elapsed="0.008904"/>
+<status status="PASS" start="2026-03-10T23:31:29.642038" elapsed="0.009764"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-03-10T23:24:11.234199" level="INFO">Fills the text 'password123' in the given field.</msg>
+<msg time="2026-03-10T23:31:29.652696" level="INFO">Fills the text 'pass123' in the given field.</msg>
 <arg>selector=input[placeholder="Password"]</arg>
 <arg>txt=${password}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:11.233578" elapsed="0.009157"/>
+<status status="PASS" start="2026-03-10T23:31:29.652099" elapsed="0.008760"/>
 </kw>
 <kw name="Get Element States" owner="Browser">
-<msg time="2026-03-10T23:24:11.279766" level="INFO">States are: ['attached', 'visible', 'enabled', 'defocused']</msg>
-<msg time="2026-03-10T23:24:11.279909" level="INFO">${state} = ['attached', 'visible', 'enabled', 'defocused']</msg>
+<msg time="2026-03-10T23:31:29.692774" level="INFO">States are: ['attached', 'visible', 'enabled', 'defocused']</msg>
+<msg time="2026-03-10T23:31:29.692986" level="INFO">${state} = ['attached', 'visible', 'enabled', 'defocused']</msg>
 <var>${state}</var>
 <arg>selector=button:has-text("Sign up")</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Get the active states from the element found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:11.242948" elapsed="0.036988"/>
+<status status="PASS" start="2026-03-10T23:31:29.661115" elapsed="0.031913"/>
 </kw>
 <if>
 <branch type="IF" condition="'enabled' in $state">
 <kw name="Click" owner="Browser">
-<msg time="2026-03-10T23:24:11.280849" level="INFO">Clicks the element 'button:has-text("Sign up")'.</msg>
+<msg time="2026-03-10T23:31:29.693894" level="INFO">Clicks the element 'button:has-text("Sign up")'.</msg>
 <arg>selector=button:has-text("Sign up")</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:11.280433" elapsed="0.024104"/>
+<status status="PASS" start="2026-03-10T23:31:29.693515" elapsed="0.020413"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-03-10T23:24:12.142265" level="INFO">Waited for Element with selector a:has-text("Settings") at state visible</msg>
+<msg time="2026-03-10T23:31:30.527277" level="INFO">Waited for Element with selector a:has-text("Settings") at state visible</msg>
 <arg>selector=a:has-text("Settings")</arg>
 <arg>state=visible</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-03-10T23:24:11.304732" elapsed="0.837730"/>
+<status status="PASS" start="2026-03-10T23:31:29.714132" elapsed="0.813321"/>
 </kw>
-<status status="PASS" start="2026-03-10T23:24:11.280091" elapsed="0.862475"/>
+<status status="PASS" start="2026-03-10T23:31:29.693175" elapsed="0.834361"/>
 </branch>
 <branch type="ELSE">
 <kw name="Fail" owner="BuiltIn">
 <arg>Registration failed: 'Sign up' button is disabled due to missing or invalid data.</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2026-03-10T23:24:12.142869" elapsed="0.000074"/>
+<status status="NOT RUN" start="2026-03-10T23:31:30.527835" elapsed="0.000077"/>
 </kw>
-<status status="NOT RUN" start="2026-03-10T23:24:12.142643" elapsed="0.000345"/>
+<status status="NOT RUN" start="2026-03-10T23:31:30.527598" elapsed="0.000367"/>
 </branch>
-<status status="PASS" start="2026-03-10T23:24:11.280045" elapsed="0.862979"/>
+<status status="PASS" start="2026-03-10T23:31:29.693138" elapsed="0.834872"/>
 </if>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-10T23:24:14.143943" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-03-10T23:31:32.528858" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-10T23:24:12.143131" elapsed="2.000975"/>
+<status status="PASS" start="2026-03-10T23:31:30.528122" elapsed="2.000900"/>
 </kw>
 <arg>${username}</arg>
 <arg>${email}</arg>
-<arg>${TEST_PASSWORD}</arg>
-<status status="PASS" start="2026-03-10T23:24:10.324825" elapsed="3.819404"/>
+<arg>${password}</arg>
+<status status="PASS" start="2026-03-10T23:31:28.771933" elapsed="3.757212"/>
 </kw>
 <kw name="Create Article" owner="Keyword">
 <kw name="Click" owner="Browser">
-<msg time="2026-03-10T23:24:14.145294" level="INFO">Clicks the element 'a:has-text("New Article")'.</msg>
+<msg time="2026-03-10T23:31:32.530308" level="INFO">Clicks the element 'a:has-text("New Article")'.</msg>
 <arg>selector=a:has-text("New Article")</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:14.144918" elapsed="0.022798"/>
+<status status="PASS" start="2026-03-10T23:31:32.529906" elapsed="0.017131"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-03-10T23:24:14.168599" level="INFO">Fills the text 'Automated Article Title' in the given field.</msg>
+<msg time="2026-03-10T23:31:32.548026" level="INFO">Fills the text 'Article A' in the given field.</msg>
 <arg>selector=input[placeholder="Article Title"]</arg>
 <arg>txt=${title}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:14.167938" elapsed="0.334271"/>
+<status status="PASS" start="2026-03-10T23:31:32.547289" elapsed="0.309014"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-03-10T23:24:14.503441" level="INFO">Fills the text 'This is an automated article description.' in the given field.</msg>
+<msg time="2026-03-10T23:31:32.857049" level="INFO">Fills the text 'Desc A' in the given field.</msg>
 <arg>selector=input[placeholder="What's this article about?"]</arg>
 <arg>txt=${description}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:14.502536" elapsed="0.011000"/>
+<status status="PASS" start="2026-03-10T23:31:32.856524" elapsed="0.007599"/>
 </kw>
 <kw name="Clear Text" owner="Browser">
 <arg>selector=textarea[name="body"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:14.513770" elapsed="0.010362"/>
+<status status="PASS" start="2026-03-10T23:31:32.864357" elapsed="0.008780"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2026-03-10T23:24:14.525030" level="INFO">Types the text '' in the given field.</msg>
+<msg time="2026-03-10T23:31:32.873914" level="INFO">Types the text 'Body A' in the given field.</msg>
 <arg>selector=textarea[name="body"]</arg>
 <arg>txt=${body}</arg>
 <arg>delay=10ms</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:14.524337" elapsed="0.015981"/>
+<status status="PASS" start="2026-03-10T23:31:32.873345" elapsed="0.106030"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-03-10T23:24:14.541144" level="INFO">Fills the text 'robotframework, automation' in the given field.</msg>
+<msg time="2026-03-10T23:31:32.980125" level="INFO">Fills the text 'tag1' in the given field.</msg>
 <arg>selector=input[placeholder="Enter tags"]</arg>
 <arg>txt=${tags}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:14.540530" elapsed="0.009438"/>
+<status status="PASS" start="2026-03-10T23:31:32.979573" elapsed="0.007509"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-03-10T23:24:14.550842" level="INFO">Clicks the element 'button:has-text("Publish Article")'.</msg>
+<msg time="2026-03-10T23:31:32.987758" level="INFO">Clicks the element 'button:has-text("Publish Article")'.</msg>
 <arg>selector=button:has-text("Publish Article")</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:14.550217" elapsed="0.028958"/>
+<status status="PASS" start="2026-03-10T23:31:32.987304" elapsed="0.017319"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-03-10T23:24:24.640285" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg time="2026-03-10T23:24:24.640444" level="INFO">See also file:///D:/Conduit-Automate-Testing/results/playwright-log.txt for additional details.</msg>
-<msg time="2026-03-10T23:24:24.640903" level="FAIL">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
-Call log:
-  - waiting for locator('h1:has-text("Automated Article Title")') to be visible
-</msg>
+<msg time="2026-03-10T23:31:35.885163" level="INFO">Waited for Element with selector h1:has-text("Article A") at state visible</msg>
 <arg>selector=h1:has-text("${title}")</arg>
 <arg>state=visible</arg>
 <arg>timeout=10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="FAIL" start="2026-03-10T23:24:14.579807" elapsed="10.064166">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
-Call log:
-  - waiting for locator('h1:has-text("Automated Article Title")') to be visible
-</status>
+<status status="PASS" start="2026-03-10T23:31:33.005480" elapsed="2.879828"/>
 </kw>
-<msg time="2026-03-10T23:24:24.644117" level="INFO">${status} = False</msg>
+<msg time="2026-03-10T23:31:35.885459" level="INFO">${status} = True</msg>
 <var>${status}</var>
 <arg>Wait For Elements State</arg>
 <arg>selector=h1:has-text("${title}")</arg>
 <arg>state=visible</arg>
 <arg>timeout=10s</arg>
 <doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-03-10T23:24:14.579383" elapsed="10.064758"/>
+<status status="PASS" start="2026-03-10T23:31:33.004855" elapsed="2.880627"/>
 </kw>
 <if>
 <branch type="IF" condition="not ${status}">
 <kw name="Take Screenshot" owner="Browser">
-<msg time="2026-03-10T23:24:24.700403" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
 <arg>selector=body</arg>
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2026-03-10T23:24:24.644480" elapsed="0.056045"/>
+<status status="NOT RUN" start="2026-03-10T23:31:35.885871" elapsed="0.000055"/>
 </kw>
 <kw name="Fail" owner="BuiltIn">
-<msg time="2026-03-10T23:24:24.701109" level="FAIL">Article creation failed or title not visible. Check screenshot.</msg>
 <arg>Article creation failed or title not visible. Check screenshot.</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="FAIL" start="2026-03-10T23:24:24.700744" elapsed="0.000448">Article creation failed or title not visible. Check screenshot.</status>
+<status status="NOT RUN" start="2026-03-10T23:31:35.886017" elapsed="0.000046"/>
 </kw>
-<status status="FAIL" start="2026-03-10T23:24:24.644243" elapsed="0.057024">Article creation failed or title not visible. Check screenshot.</status>
+<status status="NOT RUN" start="2026-03-10T23:31:35.885593" elapsed="0.000506"/>
 </branch>
-<status status="FAIL" start="2026-03-10T23:24:24.644216" elapsed="0.057100">Article creation failed or title not visible. Check screenshot.</status>
+<status status="PASS" start="2026-03-10T23:31:35.885567" elapsed="0.000566"/>
 </if>
-<arg>${ARTICLE_TITLE}</arg>
-<arg>${ARTICLE_DESC}</arg>
-<arg>${ARTICLE_BODY}</arg>
-<arg>${ARTICLE_TAGS}</arg>
-<status status="FAIL" start="2026-03-10T23:24:14.144507" elapsed="10.556903">Article creation failed or title not visible. Check screenshot.</status>
+<arg>${title}</arg>
+<arg>${description}</arg>
+<arg>${body}</arg>
+<arg>${tags}</arg>
+<status status="PASS" start="2026-03-10T23:31:32.529428" elapsed="3.356752"/>
 </kw>
-<kw name="Logout" owner="Keyword" type="TEARDOWN">
+<arg>username=user_a</arg>
+<arg>email=user_a@example.com</arg>
+<arg>password=pass123</arg>
+<arg>title=Article A</arg>
+<arg>description=Desc A</arg>
+<arg>body=Body A</arg>
+<arg>tags=tag1</arg>
+<status status="PASS" start="2026-03-10T23:31:28.770457" elapsed="7.115779"/>
+</kw>
+<kw name="Teardown Article Test" type="TEARDOWN">
+<kw name="Run Keyword If Test Passed" owner="BuiltIn">
+<kw name="Log Result To Excel" owner="Keyword">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.887907" level="INFO">${excel_path} = D:\Conduit-Automate-Testing\Resource/../Testdata/testdata_article.xlsx</msg>
+<var>${excel_path}</var>
+<arg>D:\\Conduit-Automate-Testing\\Resource/../Testdata/${excel_file}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.887635" elapsed="0.000297"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.888261" level="INFO">Logging result for user_a with status PASS to D:\Conduit-Automate-Testing\Resource/../Testdata/testdata_article.xlsx</msg>
+<arg>Logging result for ${user} with status ${status} to ${excel_path}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.888022" elapsed="0.000278"/>
+</kw>
+<kw name="Open Excel Document" owner="ExcelLibrary">
+<arg>${excel_path}</arg>
+<arg>signup</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.888380" elapsed="0.002906"/>
+</kw>
+<kw name="Read Excel Row" owner="ExcelLibrary">
+<msg time="2026-03-10T23:31:35.891600" level="INFO">${headers} = ['${username}', '${email}', '${password}', '${title}', '${description}', '${body}', '${tags}', 'Result']</msg>
+<var>${headers}</var>
+<arg>row_num=1</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Returns content of a row from the current sheet of the document.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.891391" elapsed="0.000236"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.892110" level="INFO">${u_col} = 1</msg>
+<var>${u_col}</var>
+<arg>${1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.891716" elapsed="0.000419"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.892590" level="INFO">${res_col} = -1</msg>
+<var>${res_col}</var>
+<arg>${-1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.892220" elapsed="0.000393"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.893056" level="INFO">${index} = 1</msg>
+<var>${index}</var>
+<arg>${1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.892698" elapsed="0.000381"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.893711" level="INFO">${header_str} = ${username}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.893467" elapsed="0.000268"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.894250" level="INFO">${u_col} = 1</msg>
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.894016" elapsed="0.000258"/>
+</kw>
+<status status="PASS" start="2026-03-10T23:31:35.893803" elapsed="0.000510"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.893787" elapsed="0.000562"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.894559" elapsed="0.000051"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.894393" elapsed="0.000281"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.894379" elapsed="0.000328"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.895041" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.894772" elapsed="0.000293"/>
+</kw>
+<var name="${header}">${username}</var>
+<status status="PASS" start="2026-03-10T23:31:35.893356" elapsed="0.001748"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.895584" level="INFO">${header_str} = ${email}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.895346" elapsed="0.000261"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.895844" elapsed="0.000048"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.895670" elapsed="0.000262"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.895656" elapsed="0.000306"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.896160" elapsed="0.000047"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.896005" elapsed="0.000241"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.895991" elapsed="0.000284"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.896605" level="INFO">${index} = 3</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.896336" elapsed="0.000296"/>
+</kw>
+<var name="${header}">${email}</var>
+<status status="PASS" start="2026-03-10T23:31:35.895244" elapsed="0.001430"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.897153" level="INFO">${header_str} = ${password}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.896901" elapsed="0.000277"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.897414" elapsed="0.000046"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.897240" elapsed="0.000259"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.897227" elapsed="0.000301"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.897789" elapsed="0.000054"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.897573" elapsed="0.000313"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.897557" elapsed="0.000362"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.898266" level="INFO">${index} = 4</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.897985" elapsed="0.000306"/>
+</kw>
+<var name="${header}">${password}</var>
+<status status="PASS" start="2026-03-10T23:31:35.896802" elapsed="0.001530"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.898802" level="INFO">${header_str} = ${title}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.898556" elapsed="0.000269"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.899064" elapsed="0.000048"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.898887" elapsed="0.000266"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.898873" elapsed="0.000309"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.899377" elapsed="0.000046"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.899223" elapsed="0.000239"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.899211" elapsed="0.000280"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.899807" level="INFO">${index} = 5</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.899552" elapsed="0.000279"/>
+</kw>
+<var name="${header}">${title}</var>
+<status status="PASS" start="2026-03-10T23:31:35.898456" elapsed="0.001412"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.900321" level="INFO">${header_str} = ${description}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.900093" elapsed="0.000250"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.900592" elapsed="0.000050"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.900406" elapsed="0.000280"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.900392" elapsed="0.000325"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.900915" elapsed="0.000046"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.900759" elapsed="0.000240"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.900746" elapsed="0.000283"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.901343" level="INFO">${index} = 6</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.901089" elapsed="0.000278"/>
+</kw>
+<var name="${header}">${description}</var>
+<status status="PASS" start="2026-03-10T23:31:35.899996" elapsed="0.001408"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.901855" level="INFO">${header_str} = ${body}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.901620" elapsed="0.000258"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.902113" elapsed="0.000062"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.901940" elapsed="0.000276"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.901927" elapsed="0.000319"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.902442" elapsed="0.000047"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.902287" elapsed="0.000241"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.902275" elapsed="0.000283"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.902882" level="INFO">${index} = 7</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.902622" elapsed="0.000283"/>
+</kw>
+<var name="${header}">${body}</var>
+<status status="PASS" start="2026-03-10T23:31:35.901525" elapsed="0.001419"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.903397" level="INFO">${header_str} = ${tags}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.903165" elapsed="0.000255"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.903662" elapsed="0.000049"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.903481" elapsed="0.000270"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.903468" elapsed="0.000312"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.903976" elapsed="0.000047"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.903819" elapsed="0.000244"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.903808" elapsed="0.000283"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.904432" level="INFO">${index} = 8</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.904166" elapsed="0.000290"/>
+</kw>
+<var name="${header}">${tags}</var>
+<status status="PASS" start="2026-03-10T23:31:35.903067" elapsed="0.001427"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.904956" level="INFO">${header_str} = Result</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.904723" elapsed="0.000256"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.905214" elapsed="0.000046"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.905039" elapsed="0.000260"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.905026" elapsed="0.000302"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.905746" level="INFO">${res_col} = 8</msg>
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.905521" elapsed="0.000247"/>
+</kw>
+<status status="PASS" start="2026-03-10T23:31:35.905366" elapsed="0.000440"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.905355" elapsed="0.000480"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.906143" level="INFO">${index} = 9</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.905896" elapsed="0.000270"/>
+</kw>
+<var name="${header}">Result</var>
+<status status="PASS" start="2026-03-10T23:31:35.904622" elapsed="0.001581"/>
+</iter>
+<var>${header}</var>
+<value>@{headers}</value>
+<status status="PASS" start="2026-03-10T23:31:35.893140" elapsed="0.013100"/>
+</for>
+<if>
+<branch type="IF" condition="$res_col == -1">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.906472" elapsed="0.000046"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=${res_col}</arg>
+<arg>value=Result</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Writes value to the cell.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.906599" elapsed="0.000047"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.906311" elapsed="0.000380"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.906297" elapsed="0.000424"/>
+</if>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.907010" level="INFO">${target_user} = user_a</msg>
+<var>${target_user}</var>
+<arg>${user}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.906780" elapsed="0.000252"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.907429" level="INFO">${target_user} = user_a</msg>
+<var>${target_user}</var>
+<arg>'${target_user}' == 'None'</arg>
+<arg>${EMPTY}</arg>
+<arg>${target_user}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.907142" elapsed="0.000309"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.907732" level="INFO">${row_idx} = 2</msg>
+<var>${row_idx}</var>
+<arg>2</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.907535" elapsed="0.000220"/>
+</kw>
+<while condition="${True}">
+<iter>
+<kw name="Read Excel Row" owner="ExcelLibrary">
+<msg time="2026-03-10T23:31:35.908357" level="INFO">${current_row} = ['user_a', 'user_a@example.com', 'pass123', 'Article A', 'Desc A', 'Body A', 'tag1', None]</msg>
+<var>${current_row}</var>
+<arg>row_num=${row_idx}</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Returns content of a row from the current sheet of the document.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.908139" elapsed="0.000241"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.908825" level="INFO">Length is 8.</msg>
+<msg time="2026-03-10T23:31:35.908884" level="INFO">${row_len} = 8</msg>
+<var>${row_len}</var>
+<arg>${current_row}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.908463" elapsed="0.000442"/>
+</kw>
+<if>
+<branch type="IF" condition="${row_len} == 0">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.909094" elapsed="0.000051"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.908970" elapsed="0.000213"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.908955" elapsed="0.000257"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.909624" level="INFO">${is_empty} = False</msg>
+<var>${is_empty}</var>
+<arg>all(item is None for item in $current_row)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.909281" elapsed="0.000384"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_empty}">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.909825" elapsed="0.000045"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.909733" elapsed="0.000173"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.909719" elapsed="0.000215"/>
+</if>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.910500" level="INFO">${raw_val} = user_a</msg>
+<var>${raw_val}</var>
+<arg>${current_row[${u_col}-1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.909999" elapsed="0.000525"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.910851" level="INFO">${current_val} = user_a</msg>
+<var>${current_val}</var>
+<arg>${raw_val}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.910612" elapsed="0.000262"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.911239" level="INFO">${current_val} = user_a</msg>
+<var>${current_val}</var>
+<arg>'${current_val}' == 'None'</arg>
+<arg>${EMPTY}</arg>
+<arg>${current_val}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.910960" elapsed="0.000304"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_val.strip()}' == '${target_user.strip()}'">
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>row_num=${row_idx}</arg>
+<arg>col_num=${res_col}</arg>
+<arg>value=${status}</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.911951" elapsed="0.000238"/>
+</kw>
+<status status="PASS" start="2026-03-10T23:31:35.911332" elapsed="0.000904"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.911318" elapsed="0.000950"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.912595" level="INFO">${row_idx} = 3</msg>
+<var>${row_idx}</var>
+<arg>${row_idx} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.912333" elapsed="0.000290"/>
+</kw>
+<if>
+<branch type="IF" condition="$row_idx &gt; 1000">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.912814" elapsed="0.000042"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.912690" elapsed="0.000200"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.912673" elapsed="0.000244"/>
+</if>
+<status status="PASS" start="2026-03-10T23:31:35.907810" elapsed="0.005126"/>
+</iter>
+<iter>
+<kw name="Read Excel Row" owner="ExcelLibrary">
+<msg time="2026-03-10T23:31:35.913414" level="INFO">${current_row} = ['user_b', 'user_b@example.com', 'pass456', 'Article B', 'Desc B', 'Body B', 'tag2', None]</msg>
+<var>${current_row}</var>
+<arg>row_num=${row_idx}</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Returns content of a row from the current sheet of the document.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.913214" elapsed="0.000224"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.913738" level="INFO">Length is 8.</msg>
+<msg time="2026-03-10T23:31:35.913794" level="INFO">${row_len} = 8</msg>
+<var>${row_len}</var>
+<arg>${current_row}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.913522" elapsed="0.000293"/>
+</kw>
+<if>
+<branch type="IF" condition="${row_len} == 0">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.913995" elapsed="0.000043"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.913879" elapsed="0.000193"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.913864" elapsed="0.000236"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.914789" level="INFO">${is_empty} = False</msg>
+<var>${is_empty}</var>
+<arg>all(item is None for item in $current_row)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.914164" elapsed="0.000675"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_empty}">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.915033" elapsed="0.000046"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.914931" elapsed="0.000183"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.914915" elapsed="0.000228"/>
+</if>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.915765" level="INFO">${raw_val} = user_b</msg>
+<var>${raw_val}</var>
+<arg>${current_row[${u_col}-1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.915213" elapsed="0.000579"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.916125" level="INFO">${current_val} = user_b</msg>
+<var>${current_val}</var>
+<arg>${raw_val}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.915879" elapsed="0.000269"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.916515" level="INFO">${current_val} = user_b</msg>
+<var>${current_val}</var>
+<arg>'${current_val}' == 'None'</arg>
+<arg>${EMPTY}</arg>
+<arg>${current_val}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.916235" elapsed="0.000305"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_val.strip()}' == '${target_user.strip()}'">
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>row_num=${row_idx}</arg>
+<arg>col_num=${res_col}</arg>
+<arg>value=${status}</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Writes value to the cell.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.917263" elapsed="0.000051"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.916611" elapsed="0.000748"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.916593" elapsed="0.000797"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.917716" level="INFO">${row_idx} = 4</msg>
+<var>${row_idx}</var>
+<arg>${row_idx} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.917453" elapsed="0.000287"/>
+</kw>
+<if>
+<branch type="IF" condition="$row_idx &gt; 1000">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.917929" elapsed="0.000043"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.917805" elapsed="0.000200"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.917791" elapsed="0.000242"/>
+</if>
+<status status="PASS" start="2026-03-10T23:31:35.912966" elapsed="0.005086"/>
+</iter>
+<iter>
+<kw name="Read Excel Row" owner="ExcelLibrary">
+<msg time="2026-03-10T23:31:35.918533" level="INFO">${current_row} = [None, None, None, None, None, None, None, None]</msg>
+<var>${current_row}</var>
+<arg>row_num=${row_idx}</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Returns content of a row from the current sheet of the document.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.918329" elapsed="0.000227"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.918903" level="INFO">Length is 8.</msg>
+<msg time="2026-03-10T23:31:35.918965" level="INFO">${row_len} = 8</msg>
+<var>${row_len}</var>
+<arg>${current_row}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.918645" elapsed="0.000341"/>
+</kw>
+<if>
+<branch type="IF" condition="${row_len} == 0">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.919180" elapsed="0.000044"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.919053" elapsed="0.000222"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.919038" elapsed="0.000268"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:35.919711" level="INFO">${is_empty} = True</msg>
+<var>${is_empty}</var>
+<arg>all(item is None for item in $current_row)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.919372" elapsed="0.000365"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_empty}">
+<break>
+<status status="PASS" start="2026-03-10T23:31:35.919897" elapsed="0.000061"/>
+</break>
+<status status="PASS" start="2026-03-10T23:31:35.919805" elapsed="0.000194"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:35.919791" elapsed="0.000239"/>
+</if>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${raw_val}</var>
+<arg>${current_row[${u_col}-1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.920101" elapsed="0.000051"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<var>${current_val}</var>
+<arg>${raw_val}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.920233" elapsed="0.000045"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<var>${current_val}</var>
+<arg>'${current_val}' == 'None'</arg>
+<arg>${EMPTY}</arg>
+<arg>${current_val}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.920362" elapsed="0.000045"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_val.strip()}' == '${target_user.strip()}'">
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>row_num=${row_idx}</arg>
+<arg>col_num=${res_col}</arg>
+<arg>value=${status}</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Writes value to the cell.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.920566" elapsed="0.000045"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:35.920473" elapsed="0.000183"/>
+</branch>
+<status status="NOT RUN" start="2026-03-10T23:31:35.920460" elapsed="0.000224"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${row_idx}</var>
+<arg>${row_idx} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:35.920747" elapsed="0.000055"/>
+</kw>
+<if>
+<branch type="IF" condition="$row_idx &gt; 1000">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.920924" elapsed="0.000038"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:35.920865" elapsed="0.000127"/>
+</branch>
+<status status="NOT RUN" start="2026-03-10T23:31:35.920852" elapsed="0.000165"/>
+</if>
+<status status="PASS" start="2026-03-10T23:31:35.918082" elapsed="0.002954"/>
+</iter>
+<status status="PASS" start="2026-03-10T23:31:35.907809" elapsed="0.013255"/>
+</while>
+<kw name="Save Excel Document" owner="ExcelLibrary">
+<arg>${excel_path}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.921143" elapsed="0.013805"/>
+</kw>
+<kw name="Close Current Excel Document" owner="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.935143" elapsed="0.000154"/>
+</kw>
+<arg>${CURRENT_TEST_USER}</arg>
+<arg>PASS</arg>
+<arg>testdata_article.xlsx</arg>
+<status status="PASS" start="2026-03-10T23:31:35.887307" elapsed="0.048055"/>
+</kw>
+<arg>Log Result To Excel</arg>
+<arg>${CURRENT_TEST_USER}</arg>
+<arg>PASS</arg>
+<arg>testdata_article.xlsx</arg>
+<doc>Runs the given keyword with the given arguments, if the test passed.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.886700" elapsed="0.048719"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Log Result To Excel</arg>
+<arg>${CURRENT_TEST_USER}</arg>
+<arg>FAIL</arg>
+<arg>testdata_article.xlsx</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-03-10T23:31:35.935511" elapsed="0.000258"/>
+</kw>
+<kw name="Logout" owner="Keyword">
 <kw name="Get Page Ids" owner="Browser">
-<msg time="2026-03-10T23:24:24.704760" level="INFO">${pages} = ['page=9198be9f-08d9-4ea5-aca9-89c34764e44d']</msg>
+<msg time="2026-03-10T23:31:35.950770" level="INFO">${pages} = ['page=1142b7be-2016-4490-8562-33b7b4ca36fb']</msg>
 <var>${pages}</var>
 <tag>Assertion</tag>
 <tag>BrowserControl</tag>
 <tag>Getter</tag>
 <doc>Returns a list of page ids based on the context and browser selection.
 See `Browser, Context and Page` for more information about Page and related concepts.</doc>
-<status status="PASS" start="2026-03-10T23:24:24.702021" elapsed="0.002771"/>
+<status status="PASS" start="2026-03-10T23:31:35.936244" elapsed="0.014572"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2026-03-10T23:24:24.705316" level="INFO">Length is 1.</msg>
-<msg time="2026-03-10T23:24:24.705379" level="INFO">${count} = 1</msg>
+<msg time="2026-03-10T23:31:35.951309" level="INFO">Length is 1.</msg>
+<msg time="2026-03-10T23:31:35.951371" level="INFO">${count} = 1</msg>
 <var>${count}</var>
 <arg>${pages}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2026-03-10T23:24:24.704910" elapsed="0.000490"/>
+<status status="PASS" start="2026-03-10T23:31:35.950970" elapsed="0.000423"/>
 </kw>
 <if>
 <branch type="IF" condition="$count == 0">
 <kw name="Log" owner="BuiltIn">
 <arg>No active pages found. Re-opening for cleanup...</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-03-10T23:24:24.705731" elapsed="0.000060"/>
+<status status="NOT RUN" start="2026-03-10T23:31:35.951685" elapsed="0.000053"/>
 </kw>
 <kw name="Go To" owner="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="NOT RUN" start="2026-03-10T23:24:24.705879" elapsed="0.000045"/>
+<status status="NOT RUN" start="2026-03-10T23:31:35.951831" elapsed="0.000049"/>
 </kw>
-<status status="NOT RUN" start="2026-03-10T23:24:24.705480" elapsed="0.000482"/>
+<status status="NOT RUN" start="2026-03-10T23:31:35.951479" elapsed="0.000444"/>
 </branch>
-<status status="PASS" start="2026-03-10T23:24:24.705459" elapsed="0.000538"/>
+<status status="PASS" start="2026-03-10T23:31:35.951455" elapsed="0.000502"/>
 </if>
 <kw name="LocalStorage Clear" owner="Browser">
-<msg time="2026-03-10T23:24:24.708911" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2026-03-10T23:31:35.954966" level="INFO">JavaScript executed successfully.</msg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Remove all saved data from the local storage.</doc>
-<status status="PASS" start="2026-03-10T23:24:24.706060" elapsed="0.002915"/>
+<status status="PASS" start="2026-03-10T23:31:35.952024" elapsed="0.003013"/>
 </kw>
 <kw name="SessionStorage Clear" owner="Browser">
-<msg time="2026-03-10T23:24:24.711205" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2026-03-10T23:31:35.957382" level="INFO">JavaScript executed successfully.</msg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Remove all saved data from the session storage.</doc>
-<status status="PASS" start="2026-03-10T23:24:24.709109" elapsed="0.002169"/>
+<status status="PASS" start="2026-03-10T23:31:35.955164" elapsed="0.002284"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-10T23:24:25.712140" level="INFO">Slept 1 second.</msg>
+<msg time="2026-03-10T23:31:36.958246" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-10T23:24:24.711387" elapsed="1.000870"/>
+<status status="PASS" start="2026-03-10T23:31:35.957564" elapsed="1.000794"/>
 </kw>
 <kw name="Get Element Count" owner="Browser">
-<msg time="2026-03-10T23:24:25.716745" level="INFO">${is_visible} = 0</msg>
+<msg time="2026-03-10T23:31:36.962468" level="INFO">${is_visible} = 0</msg>
 <var>${is_visible}</var>
 <arg>selector=a:has-text("Log out")</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2026-03-10T23:24:25.712442" elapsed="0.004341"/>
+<status status="PASS" start="2026-03-10T23:31:36.958533" elapsed="0.003974"/>
 </kw>
 <if>
 <branch type="IF" condition="$is_visible &gt; 0">
@@ -339,46 +1080,1115 @@ See `Browser, Context and Page` for more information about Page and related conc
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-03-10T23:24:25.717186" elapsed="0.000059"/>
+<status status="NOT RUN" start="2026-03-10T23:31:36.962879" elapsed="0.000057"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-03-10T23:24:25.717338" elapsed="0.000047"/>
+<status status="NOT RUN" start="2026-03-10T23:31:36.963030" elapsed="0.000049"/>
 </kw>
-<status status="NOT RUN" start="2026-03-10T23:24:25.716898" elapsed="0.000524"/>
+<status status="NOT RUN" start="2026-03-10T23:31:36.962622" elapsed="0.000496"/>
 </branch>
-<status status="PASS" start="2026-03-10T23:24:25.716874" elapsed="0.000581"/>
+<status status="PASS" start="2026-03-10T23:31:36.962597" elapsed="0.000555"/>
 </if>
 <kw name="Go To" owner="Browser">
-<msg time="2026-03-10T23:24:26.058064" level="INFO">Successfully opened URL https://demo.realworld.show/</msg>
+<msg time="2026-03-10T23:31:37.283894" level="INFO">Successfully opened URL https://demo.realworld.show/</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="PASS" start="2026-03-10T23:24:25.717521" elapsed="0.340773"/>
+<status status="PASS" start="2026-03-10T23:31:36.963221" elapsed="0.320947"/>
 </kw>
-<status status="PASS" start="2026-03-10T23:24:24.701773" elapsed="1.356680"/>
+<status status="PASS" start="2026-03-10T23:31:35.935987" elapsed="1.348346"/>
 </kw>
-<status status="FAIL" start="2026-03-10T23:24:10.315725" elapsed="15.742825">Article creation failed or title not visible. Check screenshot.</status>
+<status status="PASS" start="2026-03-10T23:31:35.886444" elapsed="1.397947"/>
+</kw>
+<status status="PASS" start="2026-03-10T23:31:28.762661" elapsed="8.521786"/>
+</test>
+<test id="s1-t2" name="Create New Article Successfully With user_b" line="13">
+<kw name="Create New Article From Excel">
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:37.297486" level="INFO">${CURRENT_TEST_USER} = user_b</msg>
+<arg>${CURRENT_TEST_USER}</arg>
+<arg>${username}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-03-10T23:31:37.297032" elapsed="0.000501"/>
+</kw>
+<kw name="Sign Up" owner="Keyword">
+<kw name="Click" owner="Browser">
+<msg time="2026-03-10T23:31:37.298390" level="INFO">Clicks the element 'a:has-text("Sign Up")'.</msg>
+<arg>selector=a:has-text("Sign Up")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:37.298065" elapsed="0.023615"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-03-10T23:31:37.322447" level="INFO">Fills the text 'user_b' in the given field.</msg>
+<arg>selector=input[placeholder="Username"]</arg>
+<arg>txt=${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:37.321927" elapsed="0.011265"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-03-10T23:31:37.334334" level="INFO">Fills the text 'user_b@example.com' in the given field.</msg>
+<arg>selector=input[placeholder="Email"]</arg>
+<arg>txt=${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:37.333473" elapsed="0.010083"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-03-10T23:31:37.344512" level="INFO">Fills the text 'pass456' in the given field.</msg>
+<arg>selector=input[placeholder="Password"]</arg>
+<arg>txt=${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:37.343844" elapsed="0.009552"/>
+</kw>
+<kw name="Get Element States" owner="Browser">
+<msg time="2026-03-10T23:31:37.379448" level="INFO">States are: ['attached', 'visible', 'enabled', 'defocused']</msg>
+<msg time="2026-03-10T23:31:37.379592" level="INFO">${state} = ['attached', 'visible', 'enabled', 'defocused']</msg>
+<var>${state}</var>
+<arg>selector=button:has-text("Sign up")</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:37.353645" elapsed="0.025973"/>
+</kw>
+<if>
+<branch type="IF" condition="'enabled' in $state">
+<kw name="Click" owner="Browser">
+<msg time="2026-03-10T23:31:37.380763" level="INFO">Clicks the element 'button:has-text("Sign up")'.</msg>
+<arg>selector=button:has-text("Sign up")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:37.380210" elapsed="0.019394"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-10T23:31:37.715717" level="INFO">Waited for Element with selector a:has-text("Settings") at state visible</msg>
+<arg>selector=a:has-text("Settings")</arg>
+<arg>state=visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-10T23:31:37.399798" elapsed="0.316092"/>
+</kw>
+<status status="PASS" start="2026-03-10T23:31:37.379806" elapsed="0.336169"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration failed: 'Sign up' button is disabled due to missing or invalid data.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:37.716286" elapsed="0.000083"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:37.716039" elapsed="0.000391"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:37.379766" elapsed="0.336708"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-10T23:31:39.717221" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-10T23:31:37.716575" elapsed="2.000805"/>
+</kw>
+<arg>${username}</arg>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-03-10T23:31:37.297747" elapsed="2.419763"/>
+</kw>
+<kw name="Create Article" owner="Keyword">
+<kw name="Click" owner="Browser">
+<msg time="2026-03-10T23:31:39.719042" level="INFO">Clicks the element 'a:has-text("New Article")'.</msg>
+<arg>selector=a:has-text("New Article")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:39.718477" elapsed="0.022762"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-03-10T23:31:39.742210" level="INFO">Fills the text 'Article B' in the given field.</msg>
+<arg>selector=input[placeholder="Article Title"]</arg>
+<arg>txt=${title}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:39.741504" elapsed="0.009690"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-03-10T23:31:39.752683" level="INFO">Fills the text 'Desc B' in the given field.</msg>
+<arg>selector=input[placeholder="What's this article about?"]</arg>
+<arg>txt=${description}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:39.751605" elapsed="0.010293"/>
+</kw>
+<kw name="Clear Text" owner="Browser">
+<arg>selector=textarea[name="body"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:39.762187" elapsed="0.014593"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2026-03-10T23:31:39.777875" level="INFO">Types the text 'Body B' in the given field.</msg>
+<arg>selector=textarea[name="body"]</arg>
+<arg>txt=${body}</arg>
+<arg>delay=10ms</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:39.777120" elapsed="0.108963"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-03-10T23:31:39.886771" level="INFO">Fills the text 'tag2' in the given field.</msg>
+<arg>selector=input[placeholder="Enter tags"]</arg>
+<arg>txt=${tags}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:39.886280" elapsed="0.007437"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-03-10T23:31:39.894503" level="INFO">Clicks the element 'button:has-text("Publish Article")'.</msg>
+<arg>selector=button:has-text("Publish Article")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:39.893925" elapsed="0.018035"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-10T23:31:41.242943" level="INFO">Waited for Element with selector h1:has-text("Article B") at state visible</msg>
+<arg>selector=h1:has-text("${title}")</arg>
+<arg>state=visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-10T23:31:39.912538" elapsed="1.330569"/>
+</kw>
+<msg time="2026-03-10T23:31:41.243293" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait For Elements State</arg>
+<arg>selector=h1:has-text("${title}")</arg>
+<arg>state=visible</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-10T23:31:39.912160" elapsed="1.331161"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${status}">
+<kw name="Take Screenshot" owner="Browser">
+<arg>selector=body</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.243716" elapsed="0.000062"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Article creation failed or title not visible. Check screenshot.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.243880" elapsed="0.000049"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.243430" elapsed="0.000538"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.243404" elapsed="0.000598"/>
+</if>
+<arg>${title}</arg>
+<arg>${description}</arg>
+<arg>${body}</arg>
+<arg>${tags}</arg>
+<status status="PASS" start="2026-03-10T23:31:39.717861" elapsed="1.526188"/>
+</kw>
+<arg>username=user_b</arg>
+<arg>email=user_b@example.com</arg>
+<arg>password=pass456</arg>
+<arg>title=Article B</arg>
+<arg>description=Desc B</arg>
+<arg>body=Body B</arg>
+<arg>tags=tag2</arg>
+<status status="PASS" start="2026-03-10T23:31:37.296564" elapsed="3.947542"/>
+</kw>
+<kw name="Teardown Article Test" type="TEARDOWN">
+<kw name="Run Keyword If Test Passed" owner="BuiltIn">
+<kw name="Log Result To Excel" owner="Keyword">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.245747" level="INFO">${excel_path} = D:\Conduit-Automate-Testing\Resource/../Testdata/testdata_article.xlsx</msg>
+<var>${excel_path}</var>
+<arg>D:\\Conduit-Automate-Testing\\Resource/../Testdata/${excel_file}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.245474" elapsed="0.000298"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.246101" level="INFO">Logging result for user_b with status PASS to D:\Conduit-Automate-Testing\Resource/../Testdata/testdata_article.xlsx</msg>
+<arg>Logging result for ${user} with status ${status} to ${excel_path}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.245862" elapsed="0.000277"/>
+</kw>
+<kw name="Open Excel Document" owner="ExcelLibrary">
+<arg>${excel_path}</arg>
+<arg>signup</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.246222" elapsed="0.002959"/>
+</kw>
+<kw name="Read Excel Row" owner="ExcelLibrary">
+<msg time="2026-03-10T23:31:41.249493" level="INFO">${headers} = ['${username}', '${email}', '${password}', '${title}', '${description}', '${body}', '${tags}', 'Result']</msg>
+<var>${headers}</var>
+<arg>row_num=1</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Returns content of a row from the current sheet of the document.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.249291" elapsed="0.000228"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.250003" level="INFO">${u_col} = 1</msg>
+<var>${u_col}</var>
+<arg>${1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.249611" elapsed="0.000416"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.250480" level="INFO">${res_col} = -1</msg>
+<var>${res_col}</var>
+<arg>${-1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.250114" elapsed="0.000390"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.250990" level="INFO">${index} = 1</msg>
+<var>${index}</var>
+<arg>${1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.250608" elapsed="0.000406"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.251647" level="INFO">${header_str} = ${username}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.251401" elapsed="0.000270"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.252165" level="INFO">${u_col} = 1</msg>
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.251938" elapsed="0.000250"/>
+</kw>
+<status status="PASS" start="2026-03-10T23:31:41.251740" elapsed="0.000489"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.251723" elapsed="0.000540"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.252474" elapsed="0.000049"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.252308" elapsed="0.000255"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.252294" elapsed="0.000299"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.252916" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.252657" elapsed="0.000283"/>
+</kw>
+<var name="${header}">${username}</var>
+<status status="PASS" start="2026-03-10T23:31:41.251294" elapsed="0.001684"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.253439" level="INFO">${header_str} = ${email}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.253205" elapsed="0.000257"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.253718" elapsed="0.000049"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.253527" elapsed="0.000282"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.253513" elapsed="0.000327"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.254046" elapsed="0.000056"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.253882" elapsed="0.000261"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.253870" elapsed="0.000303"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.254504" level="INFO">${index} = 3</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.254237" elapsed="0.000290"/>
+</kw>
+<var name="${header}">${email}</var>
+<status status="PASS" start="2026-03-10T23:31:41.253107" elapsed="0.001460"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.255063" level="INFO">${header_str} = ${password}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.254826" elapsed="0.000265"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.255331" elapsed="0.000047"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.255155" elapsed="0.000263"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.255141" elapsed="0.000307"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.255728" elapsed="0.000071"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.255490" elapsed="0.000357"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.255478" elapsed="0.000404"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.256239" level="INFO">${index} = 4</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.255953" elapsed="0.000312"/>
+</kw>
+<var name="${header}">${password}</var>
+<status status="PASS" start="2026-03-10T23:31:41.254725" elapsed="0.001581"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.256809" level="INFO">${header_str} = ${title}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.256545" elapsed="0.000298"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.257139" elapsed="0.000068"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.256917" elapsed="0.000344"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.256900" elapsed="0.000399"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.257549" elapsed="0.000058"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.257351" elapsed="0.000313"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.257336" elapsed="0.000367"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.258102" level="INFO">${index} = 5</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.257782" elapsed="0.000344"/>
+</kw>
+<var name="${header}">${title}</var>
+<status status="PASS" start="2026-03-10T23:31:41.256439" elapsed="0.001726"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.258626" level="INFO">${header_str} = ${description}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.258392" elapsed="0.000257"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.258884" elapsed="0.000048"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.258710" elapsed="0.000262"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.258697" elapsed="0.000306"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.259200" elapsed="0.000046"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.259044" elapsed="0.000241"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.259033" elapsed="0.000282"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.259639" level="INFO">${index} = 6</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.259377" elapsed="0.000287"/>
+</kw>
+<var name="${header}">${description}</var>
+<status status="PASS" start="2026-03-10T23:31:41.258294" elapsed="0.001408"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.260150" level="INFO">${header_str} = ${body}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.259921" elapsed="0.000252"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.260403" elapsed="0.000048"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.260233" elapsed="0.000258"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.260220" elapsed="0.000300"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.260718" elapsed="0.000047"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.260563" elapsed="0.000245"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.260550" elapsed="0.000287"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.261155" level="INFO">${index} = 7</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.260900" elapsed="0.000279"/>
+</kw>
+<var name="${header}">${body}</var>
+<status status="PASS" start="2026-03-10T23:31:41.259826" elapsed="0.001392"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.261670" level="INFO">${header_str} = ${tags}</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.261436" elapsed="0.000257"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.261930" elapsed="0.000046"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.261755" elapsed="0.000260"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.261742" elapsed="0.000303"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.262247" elapsed="0.000046"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.262089" elapsed="0.000256"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.262078" elapsed="0.000298"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.262696" level="INFO">${index} = 8</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.262439" elapsed="0.000281"/>
+</kw>
+<var name="${header}">${tags}</var>
+<status status="PASS" start="2026-03-10T23:31:41.261341" elapsed="0.001418"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.263204" level="INFO">${header_str} = Result</msg>
+<var>${header_str}</var>
+<arg>${header}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.262977" elapsed="0.000249"/>
+</kw>
+<if>
+<branch type="IF" condition="'username' in $header_str.lower()">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${u_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.263458" elapsed="0.000048"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.263286" elapsed="0.000261"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.263274" elapsed="0.000302"/>
+</if>
+<if>
+<branch type="IF" condition="'Result' == $header_str">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.264014" level="INFO">${res_col} = 8</msg>
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.263785" elapsed="0.000252"/>
+</kw>
+<status status="PASS" start="2026-03-10T23:31:41.263618" elapsed="0.000458"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.263606" elapsed="0.000501"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.264421" level="INFO">${index} = 9</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.264172" elapsed="0.000272"/>
+</kw>
+<var name="${header}">Result</var>
+<status status="PASS" start="2026-03-10T23:31:41.262881" elapsed="0.001602"/>
+</iter>
+<var>${header}</var>
+<value>@{headers}</value>
+<status status="PASS" start="2026-03-10T23:31:41.251078" elapsed="0.013443"/>
+</for>
+<if>
+<branch type="IF" condition="$res_col == -1">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${res_col}</var>
+<arg>${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.264757" elapsed="0.000046"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=${res_col}</arg>
+<arg>value=Result</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Writes value to the cell.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.264883" elapsed="0.000044"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.264593" elapsed="0.000376"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.264580" elapsed="0.000417"/>
+</if>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.265287" level="INFO">${target_user} = user_b</msg>
+<var>${target_user}</var>
+<arg>${user}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.265056" elapsed="0.000254"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.265701" level="INFO">${target_user} = user_b</msg>
+<var>${target_user}</var>
+<arg>'${target_user}' == 'None'</arg>
+<arg>${EMPTY}</arg>
+<arg>${target_user}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.265398" elapsed="0.000332"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.266040" level="INFO">${row_idx} = 2</msg>
+<var>${row_idx}</var>
+<arg>2</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.265825" elapsed="0.000239"/>
+</kw>
+<while condition="${True}">
+<iter>
+<kw name="Read Excel Row" owner="ExcelLibrary">
+<msg time="2026-03-10T23:31:41.266652" level="INFO">${current_row} = ['user_a', 'user_a@example.com', 'pass123', 'Article A', 'Desc A', 'Body A', 'tag1', 'PASS']</msg>
+<var>${current_row}</var>
+<arg>row_num=${row_idx}</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Returns content of a row from the current sheet of the document.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.266446" elapsed="0.000230"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.266986" level="INFO">Length is 8.</msg>
+<msg time="2026-03-10T23:31:41.267041" level="INFO">${row_len} = 8</msg>
+<var>${row_len}</var>
+<arg>${current_row}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.266760" elapsed="0.000301"/>
+</kw>
+<if>
+<branch type="IF" condition="${row_len} == 0">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.267269" elapsed="0.000046"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.267144" elapsed="0.000206"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.267129" elapsed="0.000249"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.267791" level="INFO">${is_empty} = False</msg>
+<var>${is_empty}</var>
+<arg>all(item is None for item in $current_row)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.267444" elapsed="0.000373"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_empty}">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.267977" elapsed="0.000043"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.267884" elapsed="0.000168"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.267869" elapsed="0.000212"/>
+</if>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.268701" level="INFO">${raw_val} = user_a</msg>
+<var>${raw_val}</var>
+<arg>${current_row[${u_col}-1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.268147" elapsed="0.000593"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.269085" level="INFO">${current_val} = user_a</msg>
+<var>${current_val}</var>
+<arg>${raw_val}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.268835" elapsed="0.000274"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.269482" level="INFO">${current_val} = user_a</msg>
+<var>${current_val}</var>
+<arg>'${current_val}' == 'None'</arg>
+<arg>${EMPTY}</arg>
+<arg>${current_val}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.269199" elapsed="0.000307"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_val.strip()}' == '${target_user.strip()}'">
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>row_num=${row_idx}</arg>
+<arg>col_num=${res_col}</arg>
+<arg>value=${status}</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Writes value to the cell.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.270211" elapsed="0.000059"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.269572" elapsed="0.000743"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.269559" elapsed="0.000789"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.270675" level="INFO">${row_idx} = 3</msg>
+<var>${row_idx}</var>
+<arg>${row_idx} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.270414" elapsed="0.000286"/>
+</kw>
+<if>
+<branch type="IF" condition="$row_idx &gt; 1000">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.270992" elapsed="0.000046"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.270820" elapsed="0.000253"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.270798" elapsed="0.000305"/>
+</if>
+<status status="PASS" start="2026-03-10T23:31:41.266122" elapsed="0.005000"/>
+</iter>
+<iter>
+<kw name="Read Excel Row" owner="ExcelLibrary">
+<msg time="2026-03-10T23:31:41.271611" level="INFO">${current_row} = ['user_b', 'user_b@example.com', 'pass456', 'Article B', 'Desc B', 'Body B', 'tag2', None]</msg>
+<var>${current_row}</var>
+<arg>row_num=${row_idx}</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Returns content of a row from the current sheet of the document.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.271402" elapsed="0.000233"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.271949" level="INFO">Length is 8.</msg>
+<msg time="2026-03-10T23:31:41.272005" level="INFO">${row_len} = 8</msg>
+<var>${row_len}</var>
+<arg>${current_row}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.271728" elapsed="0.000298"/>
+</kw>
+<if>
+<branch type="IF" condition="${row_len} == 0">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.272206" elapsed="0.000042"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.272088" elapsed="0.000196"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.272074" elapsed="0.000239"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.272711" level="INFO">${is_empty} = False</msg>
+<var>${is_empty}</var>
+<arg>all(item is None for item in $current_row)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.272380" elapsed="0.000356"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_empty}">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.272893" elapsed="0.000042"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.272802" elapsed="0.000166"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.272789" elapsed="0.000207"/>
+</if>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.273556" level="INFO">${raw_val} = user_b</msg>
+<var>${raw_val}</var>
+<arg>${current_row[${u_col}-1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.273063" elapsed="0.000517"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.273907" level="INFO">${current_val} = user_b</msg>
+<var>${current_val}</var>
+<arg>${raw_val}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.273670" elapsed="0.000259"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.274296" level="INFO">${current_val} = user_b</msg>
+<var>${current_val}</var>
+<arg>'${current_val}' == 'None'</arg>
+<arg>${EMPTY}</arg>
+<arg>${current_val}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.274016" elapsed="0.000312"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_val.strip()}' == '${target_user.strip()}'">
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>row_num=${row_idx}</arg>
+<arg>col_num=${res_col}</arg>
+<arg>value=${status}</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.275013" elapsed="0.000230"/>
+</kw>
+<status status="PASS" start="2026-03-10T23:31:41.274396" elapsed="0.000894"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.274383" elapsed="0.000939"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.275649" level="INFO">${row_idx} = 4</msg>
+<var>${row_idx}</var>
+<arg>${row_idx} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.275386" elapsed="0.000293"/>
+</kw>
+<if>
+<branch type="IF" condition="$row_idx &gt; 1000">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.275877" elapsed="0.000043"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.275743" elapsed="0.000211"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.275730" elapsed="0.000251"/>
+</if>
+<status status="PASS" start="2026-03-10T23:31:41.271150" elapsed="0.004850"/>
+</iter>
+<iter>
+<kw name="Read Excel Row" owner="ExcelLibrary">
+<msg time="2026-03-10T23:31:41.276467" level="INFO">${current_row} = [None, None, None, None, None, None, None, None]</msg>
+<var>${current_row}</var>
+<arg>row_num=${row_idx}</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Returns content of a row from the current sheet of the document.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.276267" elapsed="0.000223"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.276785" level="INFO">Length is 8.</msg>
+<msg time="2026-03-10T23:31:41.276840" level="INFO">${row_len} = 8</msg>
+<var>${row_len}</var>
+<arg>${current_row}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.276574" elapsed="0.000286"/>
+</kw>
+<if>
+<branch type="IF" condition="${row_len} == 0">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.277039" elapsed="0.000049"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.276921" elapsed="0.000211"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.276907" elapsed="0.000254"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.277559" level="INFO">${is_empty} = True</msg>
+<var>${is_empty}</var>
+<arg>all(item is None for item in $current_row)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.277227" elapsed="0.000357"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_empty}">
+<break>
+<status status="PASS" start="2026-03-10T23:31:41.277747" elapsed="0.000060"/>
+</break>
+<status status="PASS" start="2026-03-10T23:31:41.277649" elapsed="0.000194"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.277636" elapsed="0.000239"/>
+</if>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${raw_val}</var>
+<arg>${current_row[${u_col}-1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.277946" elapsed="0.000052"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<var>${current_val}</var>
+<arg>${raw_val}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.278079" elapsed="0.000045"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<var>${current_val}</var>
+<arg>'${current_val}' == 'None'</arg>
+<arg>${EMPTY}</arg>
+<arg>${current_val}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.278207" elapsed="0.000045"/>
+</kw>
+<if>
+<branch type="IF" condition="'${current_val.strip()}' == '${target_user.strip()}'">
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>row_num=${row_idx}</arg>
+<arg>col_num=${res_col}</arg>
+<arg>value=${status}</arg>
+<arg>sheet_name=Sheet1</arg>
+<doc>Writes value to the cell.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.278408" elapsed="0.000045"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.278316" elapsed="0.000178"/>
+</branch>
+<status status="NOT RUN" start="2026-03-10T23:31:41.278304" elapsed="0.000219"/>
+</if>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${row_idx}</var>
+<arg>${row_idx} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.278582" elapsed="0.000045"/>
+</kw>
+<if>
+<branch type="IF" condition="$row_idx &gt; 1000">
+<break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.278755" elapsed="0.000039"/>
+</break>
+<status status="NOT RUN" start="2026-03-10T23:31:41.278686" elapsed="0.000158"/>
+</branch>
+<status status="NOT RUN" start="2026-03-10T23:31:41.278674" elapsed="0.000209"/>
+</if>
+<status status="PASS" start="2026-03-10T23:31:41.276026" elapsed="0.002880"/>
+</iter>
+<status status="PASS" start="2026-03-10T23:31:41.266120" elapsed="0.012817"/>
+</while>
+<kw name="Save Excel Document" owner="ExcelLibrary">
+<arg>${excel_path}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.279023" elapsed="0.012913"/>
+</kw>
+<kw name="Close Current Excel Document" owner="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.292129" elapsed="0.000149"/>
+</kw>
+<arg>${CURRENT_TEST_USER}</arg>
+<arg>PASS</arg>
+<arg>testdata_article.xlsx</arg>
+<status status="PASS" start="2026-03-10T23:31:41.245157" elapsed="0.047184"/>
+</kw>
+<arg>Log Result To Excel</arg>
+<arg>${CURRENT_TEST_USER}</arg>
+<arg>PASS</arg>
+<arg>testdata_article.xlsx</arg>
+<doc>Runs the given keyword with the given arguments, if the test passed.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.244573" elapsed="0.047831"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Log Result To Excel</arg>
+<arg>${CURRENT_TEST_USER}</arg>
+<arg>FAIL</arg>
+<arg>testdata_article.xlsx</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.292500" elapsed="0.000254"/>
+</kw>
+<kw name="Logout" owner="Keyword">
+<kw name="Get Page Ids" owner="Browser">
+<msg time="2026-03-10T23:31:41.296009" level="INFO">${pages} = ['page=1142b7be-2016-4490-8562-33b7b4ca36fb']</msg>
+<var>${pages}</var>
+<tag>Assertion</tag>
+<tag>BrowserControl</tag>
+<tag>Getter</tag>
+<doc>Returns a list of page ids based on the context and browser selection.
+See `Browser, Context and Page` for more information about Page and related concepts.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.293221" elapsed="0.002823"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-03-10T23:31:41.296444" level="INFO">Length is 1.</msg>
+<msg time="2026-03-10T23:31:41.296517" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${pages}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.296162" elapsed="0.000378"/>
+</kw>
+<if>
+<branch type="IF" condition="$count == 0">
+<kw name="Log" owner="BuiltIn">
+<arg>No active pages found. Re-opening for cleanup...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.296822" elapsed="0.000051"/>
+</kw>
+<kw name="Go To" owner="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:41.296963" elapsed="0.000054"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:41.296621" elapsed="0.000444"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:41.296600" elapsed="0.000500"/>
+</if>
+<kw name="LocalStorage Clear" owner="Browser">
+<msg time="2026-03-10T23:31:41.299200" level="INFO">JavaScript executed successfully.</msg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Remove all saved data from the local storage.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.297191" elapsed="0.002067"/>
+</kw>
+<kw name="SessionStorage Clear" owner="Browser">
+<msg time="2026-03-10T23:31:41.301172" level="INFO">JavaScript executed successfully.</msg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Remove all saved data from the session storage.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.299364" elapsed="0.001866"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-10T23:31:42.301736" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-10T23:31:41.301333" elapsed="1.000548"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2026-03-10T23:31:42.305860" level="INFO">${is_visible} = 0</msg>
+<var>${is_visible}</var>
+<arg>selector=a:has-text("Log out")</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2026-03-10T23:31:42.302109" elapsed="0.003796"/>
+</kw>
+<if>
+<branch type="IF" condition="$is_visible &gt; 0">
+<kw name="Click" owner="Browser">
+<arg>selector=a:has-text("Log out")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:42.306317" elapsed="0.000059"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-03-10T23:31:42.306475" elapsed="0.000050"/>
+</kw>
+<status status="NOT RUN" start="2026-03-10T23:31:42.306030" elapsed="0.000535"/>
+</branch>
+<status status="PASS" start="2026-03-10T23:31:42.306008" elapsed="0.000592"/>
+</if>
+<kw name="Go To" owner="Browser">
+<msg time="2026-03-10T23:31:42.617882" level="INFO">Successfully opened URL https://demo.realworld.show/</msg>
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-03-10T23:31:42.306669" elapsed="0.311452"/>
+</kw>
+<status status="PASS" start="2026-03-10T23:31:41.292970" elapsed="1.325333"/>
+</kw>
+<status status="PASS" start="2026-03-10T23:31:41.244313" elapsed="1.374095"/>
+</kw>
+<status status="PASS" start="2026-03-10T23:31:37.293504" elapsed="5.324991"/>
 </test>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2026-03-10T23:24:26.275506" level="INFO">Closed browser</msg>
+<msg time="2026-03-10T23:31:42.800885" level="INFO">Closed browser</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-03-10T23:24:26.071119" elapsed="0.204624"/>
+<status status="PASS" start="2026-03-10T23:31:42.627924" elapsed="0.173194"/>
 </kw>
-<status status="FAIL" start="2026-03-10T23:23:58.294521" elapsed="27.981339"/>
+<status status="PASS" start="2026-03-10T23:31:17.707591" elapsed="25.093631"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="New Article" id="s1" pass="0" fail="1" skip="0">New Article</stat>
+<stat name="New Article" id="s1" pass="2" fail="0" skip="0">New Article</stat>
 </suite>
 </statistics>
 <errors>
