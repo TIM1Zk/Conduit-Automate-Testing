@@ -18,12 +18,14 @@ Sign Up
     Fill Text    selector=input[placeholder="Email"]    txt=${email}
     Fill Text    selector=input[placeholder="Password"]    txt=${password}
     
-    # Check if button is enabled before clicking to avoid 10s timeout on empty fields
+    # Check if button is enabled
     ${state}=    Get Element States    selector=button:has-text("Sign up")
     IF    'enabled' in $state
         Click    selector=button:has-text("Sign up")
+        # Verify success by checking if we are redirected (e.g., Settings appears)
+        Wait For Elements State    selector=a:has-text("Settings")    state=visible    timeout=5s
     ELSE
-        Log    Sign up button is disabled. Skipping click for user: ${username}
+        Fail    Registration failed: 'Sign up' button is disabled due to missing or invalid data.
     END
     Sleep    2s
 
