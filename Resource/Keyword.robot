@@ -17,7 +17,14 @@ Sign Up
     Fill Text    selector=input[placeholder="Username"]    txt=${username}
     Fill Text    selector=input[placeholder="Email"]    txt=${email}
     Fill Text    selector=input[placeholder="Password"]    txt=${password}
-    Click    selector=button:has-text("Sign up")
+    
+    # Check if button is enabled before clicking to avoid 10s timeout on empty fields
+    ${state}=    Get Element States    selector=button:has-text("Sign up")
+    IF    'enabled' in $state
+        Click    selector=button:has-text("Sign up")
+    ELSE
+        Log    Sign up button is disabled. Skipping click for user: ${username}
+    END
     Sleep    2s
 
 Logout

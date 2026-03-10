@@ -1,6 +1,6 @@
 *** Settings ***
 Library     Browser
-Library     DataDriver    file=${CURDIR}/../Testdata/testdata_signup.xlsx    sheet_name=Sheet1
+Library     DataDriver    file=${CURDIR}/../Testdata/testdata_signup.xlsx    sheet_name=Sheet1    handle_empty_cells=True
 Resource    ../Resource/Keyword.robot
 
 Suite Setup      Go To Url
