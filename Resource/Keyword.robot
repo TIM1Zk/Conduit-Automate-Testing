@@ -96,6 +96,9 @@ Log Result To Excel
     Save Excel Document    ${excel_path}
     Close Current Excel Document
 
-Read Excel With Pandas
-    ${data}=    Read Excel File    testdata_signup.xlsx
-    Log Many    ${data}
+Read Excel With ExcelLibrary
+    ${excel_path}=    Set Variable    ${CURDIR}/../Testdata/testdata_signup.xlsx
+    Open Excel Document    ${excel_path}    read_data
+    ${data}=    Make List From Excel Sheet    Sheet1
+    Log Many    @{data}
+    Close Current Excel Document
