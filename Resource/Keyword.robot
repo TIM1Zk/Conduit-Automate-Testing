@@ -55,12 +55,23 @@ Sign Up
     ${state}=    Get Element States    selector=button:has-text("Sign up")
     IF    'enabled' in $state
         Click    selector=button:has-text("Sign up")
-        # Verify success by checking if we are redirected (e.g., Settings appears)
-        Wait For Elements State    selector=a:has-text("Settings")    state=visible    timeout=5s
+        # Wait to see if we logged in or if an error appeared
+        ${success}=    Run Keyword And Return Status    Wait For Elements State    selector=a:has-text("Settings")    state=visible    timeout=5s
+        IF    not ${success}
+            ${error_visible}=    Run Keyword And Return Status    Wait For Elements State    selector=.error-messages    state=visible    timeout=2s
+            IF    ${error_visible}
+                ${errors}=    Get Text    selector=.error-messages
+                Take Screenshot    selector=body
+                Fail    Registration failed with error: ${errors}
+            ELSE
+                Take Screenshot    selector=body
+                Fail    Registration failed: Did not redirect to home page and no error message found.
+            END
+        END
     ELSE
+        Take Screenshot    selector=body
         Fail    Registration failed: 'Sign up' button is disabled due to missing or invalid data.
     END
-    Sleep    2s
 
 Logout
     # Robust logout: check if page exists first to avoid 'No active page' errors
