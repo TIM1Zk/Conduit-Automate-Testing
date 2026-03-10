@@ -61,11 +61,11 @@ Log Result To Excel
     # Get headers to find indices (headers are in row 1)
     ${headers}=      Read Excel Row    row_num=1    sheet_name=Sheet1
     
-    ${u_col}=    Set Variable    1
-    ${res_col}=    Set Variable    -1
+    ${u_col}=    Set Variable    ${1}
+    ${res_col}=    Set Variable    ${-1}
     
     # Finding column indices (ExcelLibrary indices for cells are 1-based)
-    ${index}=    Set Variable    1
+    ${index}=    Set Variable    ${1}
     FOR    ${header}    IN    @{headers}
         ${header_str}=    Convert To String    ${header}
         IF    'username' in $header_str.lower()
@@ -83,18 +83,28 @@ Log Result To Excel
         Write Excel Cell    row_num=1    col_num=${res_col}    value=Result    sheet_name=Sheet1
     END
     
-    # Update result for the specific user
-    # Search starting from row 2
+    # Standardize target user value for comparison
+    ${target_user}=    Convert To String    ${user}
+    ${target_user}=    Set Variable If    '${target_user}' == 'None'    ${EMPTY}    ${target_user}
+
+    # Update result for all matching rows
     ${row_idx}=    Set Variable    2
     WHILE    ${True}
         ${current_row}=    Read Excel Row    row_num=${row_idx}    sheet_name=Sheet1
         ${row_len}=    Get Length    ${current_row}
         IF    ${row_len} == 0    BREAK
         
-        ${current_val}=    Convert To String    ${current_row[${u_col}-1]}
-        IF    '${current_val.strip()}' == '${user}'
+        # Stop if the entire row is empty (Nones) to avoid ghost rows
+        ${is_empty}=    Evaluate    all(item is None for item in $current_row)
+        IF    ${is_empty}    BREAK
+        
+        ${raw_val}=    Set Variable    ${current_row[${u_col}-1]}
+        ${current_val}=    Convert To String    ${raw_val}
+        ${current_val}=    Set Variable If    '${current_val}' == 'None'    ${EMPTY}    ${current_val}
+
+        IF    '${current_val.strip()}' == '${target_user.strip()}'
             Write Excel Cell    row_num=${row_idx}    col_num=${res_col}    value=${status}    sheet_name=Sheet1
-            BREAK
+            # DO NOT BREAK: update all matches (for duplicate usernames)
         END
         ${row_idx}=    Evaluate    ${row_idx} + 1
         IF    $row_idx > 1000    BREAK
