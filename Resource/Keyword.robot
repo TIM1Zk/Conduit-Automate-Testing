@@ -11,6 +11,39 @@ Go To Url
     Set Browser Timeout  10s
     Sleep    5s
 
+Login
+    [Arguments]    ${email}    ${password}
+    Click    selector=a:has-text("Sign in")
+    Fill Text    selector=input[placeholder="Email"]    txt=${email}
+    Fill Text    selector=input[placeholder="Password"]    txt=${password}
+    Click    selector=button:has-text("Sign in")
+    # Reduced timeout for faster failure during debug, but added screenshot
+    ${status}=    Run Keyword And Return Status    Wait For Elements State    selector=a:has-text("New Article")    state=visible    timeout=10s
+    IF    not ${status}
+        Take Screenshot    selector=body
+        Fail    Login failed or "New Article" link not visible. Check screenshot.
+    END
+
+Create Article
+    [Arguments]    ${title}    ${description}    ${body}    ${tags}
+    Click    selector=a:has-text("New Article")
+    Fill Text    selector=input[placeholder="Article Title"]    txt=${title}
+    Fill Text    selector=input[placeholder="What's this article about?"]    txt=${description}
+    
+    # Use name selector discovered in research
+    # Clear potential default whitespace before typing
+    Clear Text    selector=textarea[name="body"]
+    Type Text    selector=textarea[name="body"]    txt=${body}    delay=10ms
+    
+    Fill Text    selector=input[placeholder="Enter tags"]    txt=${tags}
+    Click    selector=button:has-text("Publish Article")
+    # Verify success: The published article title should be visible as an h1
+    ${status}=    Run Keyword And Return Status    Wait For Elements State    selector=h1:has-text("${title}")    state=visible    timeout=10s
+    IF    not ${status}
+        Take Screenshot    selector=body
+        Fail    Article creation failed or title not visible. Check screenshot.
+    END
+
 Sign Up
     [Arguments]    ${username}    ${email}    ${password}
     Click    selector=a:has-text("Sign Up")
