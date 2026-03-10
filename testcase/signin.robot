@@ -11,6 +11,7 @@ Test Template    Sign Up Page Template
 ${username}    default_user
 ${email}       default@example.com
 ${password}    default_pass
+${CURRENT_USER}    ${EMPTY}
 
 *** Test Cases ***
 Sign Up Test With Excel    ${username}    ${email}    ${password}
