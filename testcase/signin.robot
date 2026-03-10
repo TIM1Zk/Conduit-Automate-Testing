@@ -7,11 +7,6 @@ Suite Setup      Go To Url
 Test Teardown    Teardown Actions
 Test Template    Sign Up Page Template
 
-*** Variables ***
-${username}    default_user
-${email}       default@example.com
-${password}    default_pass
-${CURRENT_USER}    ${EMPTY}
 
 *** Test Cases ***
 Sign Up Test With Excel    ${username}    ${email}    ${password}
