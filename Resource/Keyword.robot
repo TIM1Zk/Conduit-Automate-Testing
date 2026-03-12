@@ -24,6 +24,36 @@ Login
         Fail    Login failed or "New Article" link not visible. Check screenshot.
     END
 
+Verify Article Display and Content
+    [Arguments]    ${username}    ${email}    ${password}    ${title}    ${description}    ${body}    ${tags}
+    
+    # 1. เช็กว่าหัวข้อ (H1) ตรงกับใน Excel ไหม
+    Wait For Elements State    xpath://h1[text()="${title}"]    visible    timeout=10s
+    Log To Console    Verified Title: ${title}
+
+    # 2. เช็กว่าเนื้อหาบทความ (Body) แสดงผลครบถ้วนไหม
+    Get Text    css:.article-content    contains    ${body}
+    Log To Console    Verified Body: ${body}
+
+    # 3. เช็กว่าชื่อผู้เขียน (Author) เป็นชื่อของเราที่สมัครไปไหม
+    # (ในหน้านี้ชื่อคนเขียนมักจะอยู่ในคลาส .author)
+    Get Text    xpath:(//a[@class="author"])[1]    ==    ${username}
+
+    # 4. เช็กปุ่ม Edit/Delete (เจ้าของบทความต้องเห็นปุ่มนี้)
+    Wait For Elements State    xpath://a[contains(@class, "btn-outline-secondary") and contains(text(), "Edit Article")]    visible
+    Wait For Elements State    xpath://button[contains(@class, "btn-outline-danger") and contains(text(), "Delete Article")]    visible
+
+Go To Global Feed
+    # Try clicking Global Feed tab if it exists, otherwise assume we are there or it's a link
+    ${status}=    Run Keyword And Return Status    Click    text="Global Feed"
+    IF    not ${status}
+        Log    'Global Feed' text not clickable or not found. Continuing...
+    END
+
+Click On First Article
+    # Click 'Read more...' in the first article preview as requested
+    Click    xpath=(//div[@class='article-preview'])[1]//span[contains(text(), 'Read more')]
+
 Create Article
     [Arguments]    ${title}    ${description}    ${body}    ${tags}
     Click    selector=a:has-text("New Article")
@@ -155,6 +185,57 @@ Log Result To Excel
         ${row_idx}=    Evaluate    ${row_idx} + 1
         IF    $row_idx > 1000    BREAK
     END
+    
+    Save Excel Document    ${excel_path}
+    Close Current Excel Document
+
+Save Article Content To Excel
+    [Arguments]    ${filename}=extracted_articles.xlsx
+    ${excel_path}=    Set Variable    ${CURDIR}/../Testdata/${filename}
+    
+    # Extract content from current page
+    ${title}=    Get Text    css=h1
+    ${body}=     Get Text    css=.article-content
+    ${date}=     Get Text    css=.date >> nth=0
+    ${author}=   Get Text    css=.author >> nth=0
+    
+    # Extract tags as a list then join them
+    ${tag_elements}=    Get Elements    css=.tag-list li
+    ${tags}=    Set Variable    ${EMPTY}
+    FOR    ${element}    IN    @{tag_elements}
+        ${text}=    Get Text    ${element}
+        ${tags}=    Set Variable    ${tags}${text}, 
+    END
+    
+    # Use robust pure robot append keyword
+    Append Article To Excel    ${excel_path}    ${title}    ${body}    ${tags}    ${date}    ${author}
+
+Append Article To Excel
+    [Arguments]    ${excel_path}    ${title}    ${body}    ${tags}=${EMPTY}    ${date}=${EMPTY}    ${author}=${EMPTY}
+    # Try to open existing document
+    ${status}    ${error}=    Run Keyword And Ignore Error    Open Excel Document    ${excel_path}    doc_id=append_doc
+    
+    # If not found, create a new one
+    IF    '${status}' == 'FAIL'
+        Create Excel Document    doc_id=append_doc
+        Write Excel Cell    row_num=1    col_num=1    value=Title     sheet_name=Sheet
+        Write Excel Cell    row_num=1    col_num=2    value=Body      sheet_name=Sheet
+        Write Excel Cell    row_num=1    col_num=3    value=Tags      sheet_name=Sheet
+        Write Excel Cell    row_num=1    col_num=4    value=Date      sheet_name=Sheet
+        Write Excel Cell    row_num=1    col_num=5    value=Author    sheet_name=Sheet
+        Save Excel Document    ${excel_path}
+    END
+    
+    # Find last row to append
+    ${col_data}=    Read Excel Column    col_num=1    sheet_name=Sheet
+    ${count}=    Get Length    ${col_data}
+    ${next_row}=    Evaluate    ${count} + 1
+    
+    Write Excel Cell    row_num=${next_row}    col_num=1    value=${title}     sheet_name=Sheet
+    Write Excel Cell    row_num=${next_row}    col_num=2    value=${body}      sheet_name=Sheet
+    Write Excel Cell    row_num=${next_row}    col_num=3    value=${tags}      sheet_name=Sheet
+    Write Excel Cell    row_num=${next_row}    col_num=4    value=${date}      sheet_name=Sheet
+    Write Excel Cell    row_num=${next_row}    col_num=5    value=${author}    sheet_name=Sheet
     
     Save Excel Document    ${excel_path}
     Close Current Excel Document

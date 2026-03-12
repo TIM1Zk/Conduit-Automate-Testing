@@ -1,0 +1,7 @@
+results/
+*.html
+*.xml
+playwright-log.txt
+*.xlsx
+# Except the specific test data we want to keep
+!Testdata/extracted_articles.xlsx

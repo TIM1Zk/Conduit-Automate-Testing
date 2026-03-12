@@ -41,6 +41,7 @@ Before running the tests, ensure you have the following installed:
 
 - **Data-Driven Testing:** Uses Excel files to run tests with multiple sets of data.
 - **Automated Results Logging:** Test outcomes (PASS/FAIL) are automatically written back to the 'Result' column in the corresponding Excel data files after execution.
+- **Article Extraction:** Features a specialized robot to extract article metadata (Title, Body, Tags, Date) from the Global Feed and save it to `Testdata/extracted_articles.xlsx`.
 
 ## 🛠️ How to Run Tests
 
